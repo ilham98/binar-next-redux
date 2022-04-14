@@ -4,7 +4,6 @@ import { Button, Form, FormGroup, Label, Input, Table } from "reactstrap";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, updateUser, deleteUser } from "../redux/slices/usersSlice";
-import Link from "next/link";
 
 function Index() {
   const users = useSelector((state) => state.users);
@@ -68,7 +67,6 @@ function Index() {
     <>
       <Navbar />
       <Container>
-        <Link href="users">Users</Link>
         <Form onSubmit={onSubmit}>
           <FormGroup>
             <Label>First Name</Label>
